@@ -18,9 +18,10 @@ def report_consecutive_groups(ampere_counts):
     return [list(y) for x, y in itertools.groupby(ampere_counts, lambda z: z == 0) if not x]
 
 #------------Current Sensing----------------
-def check_error(sensor_readings):
-  if 4095 in sensor_readings:
-    sensor_readings.remove(4095)
+error = 4095
+def remove_error(sensor_readings):
+  if error in sensor_readings:
+    sensor_readings.remove(error)
   return sensor_readings
 
 def input_to_amps(input):

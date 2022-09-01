@@ -21,7 +21,7 @@ class TestAmperesRanges(unittest.TestCase):
 
     #------------Current Sensing test code----------------
     def test_check_error(self):
-      self.assertEqual(check_error([0,10,100,1000,4000,4095]),[0,10,100,1000,4000])
+      self.assertEqual(remove_error([0,10,100,1000,4000,4095]),[0,10,100,1000,4000])
 
     def test_input_to_amps(self):
       self.assertEqual(input_to_amps(0),0)
