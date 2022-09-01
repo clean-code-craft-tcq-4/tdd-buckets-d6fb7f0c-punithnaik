@@ -1,5 +1,5 @@
 import unittest
-from range import bucket_amperes, bucket_individual_readings, report_consecutive_groups, check_error, input_to_amps
+from range import bucket_amperes, bucket_individual_readings, report_consecutive_groups, remove_error, input_to_amps
 
 class TestAmperesRanges(unittest.TestCase):
     def test_two_values_are_reported_in_range(self):
